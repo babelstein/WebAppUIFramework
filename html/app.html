@@ -8,50 +8,55 @@
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="/assets/main.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="/assets/spinner.css" />
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/login.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/spinner.css" />
 </head>
 <body>
-    <div id="InitialLoading"> 
-        <div id="initialSpinner">
-                    <div class="sk-circle">
-                        <div class="sk-circle1 sk-child"></div>
-                        <div class="sk-circle2 sk-child"></div>
-                        <div class="sk-circle3 sk-child"></div>
-                        <div class="sk-circle4 sk-child"></div>
-                        <div class="sk-circle5 sk-child"></div>
-                        <div class="sk-circle6 sk-child"></div>
-                        <div class="sk-circle7 sk-child"></div>
-                        <div class="sk-circle8 sk-child"></div>
-                        <div class="sk-circle9 sk-child"></div>
-                        <div class="sk-circle10 sk-child"></div>
-                        <div class="sk-circle11 sk-child"></div>
-                        <div class="sk-circle12 sk-child"></div>
-                        <div class="sk-circle12 sk-child"></div>
-                        <div class="sk-circle12 sk-child"></div>
-                    </div>
+    <div id="loader"> 
+        <div class="initialSpinner">
+            <div class="sk-circle">
+                <div class="sk-circle1 sk-child"></div>
+                <div class="sk-circle2 sk-child"></div>
+                <div class="sk-circle3 sk-child"></div>
+                <div class="sk-circle4 sk-child"></div>
+                <div class="sk-circle5 sk-child"></div>
+                <div class="sk-circle6 sk-child"></div>
+                <div class="sk-circle7 sk-child"></div>
+                <div class="sk-circle8 sk-child"></div>
+                <div class="sk-circle9 sk-child"></div>
+                <div class="sk-circle10 sk-child"></div>
+                <div class="sk-circle11 sk-child"></div>
+                <div class="sk-circle12 sk-child"></div>
+                <div class="sk-circle12 sk-child"></div>
+                <div class="sk-circle12 sk-child"></div>
+            </div>
         </div>
     </div>
-    <h1>Dzień dobry!</h1>
-    <div class="login-block">
-        <img src="" alt="logo" class="loading-logo">    
-
-        
-        <form action="/Identity/Login" method="post" class="login-form">
-            <div class="form-group has-success">
-                <label for="login" class="form-label">Login: </label>
-                <input type="text" name="login" id="login" class="form-input"/>
-            </div>
-            <div class="form-group has-success">
-                <label for="password" class="form-label">Hasło: </label>
-                <input type="password" name="password" id="password" class="form-input"/>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Login" class="btn btn-primary input-group-btn">
-            </div>
-        </form>
+    <div id="login-page" class="hidden">
+        <h1>Dzień dobry!</h1>
+        <div class="login-block">
+            <img src="" alt="logo" class="loading-logo">
+            <form action="/Identity/Login" method="post" class="login-form">
+                <div class="form-group has-success">
+                    <label for="login" class="form-label">Login: </label>
+                    <input type="text" name="login" id="login" class="form-input"/>
+                </div>
+                <div class="form-group has-success">
+                    <label for="password" class="form-label">Hasło: </label>
+                    <input type="password" name="password" id="password" class="form-input" autocomplete/>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-error input-group-btn">Login</button>
+                </div>
+            </form>
+        </div>
     </div>
-</body>
+    <div id="main-layout">
+
+    </div>
+</body> 
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="/assets/js/init.js" defer ></script>
+<script src="/assets/js/loginPage.js" defer ></script>
 </html>

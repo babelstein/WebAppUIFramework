@@ -1,0 +1,22 @@
+body{
+    background-color: #333;
+    text-align: center;
+    color: white;
+    transition:all 1s;
+}
+
+#loader{
+    text-align: center;
+    margin-top: 20%;
+    transform: scale(1.5);
+}
+
+#initialSpinner{
+    position:absolute;
+    left:50%;
+    top:50%;
+}
+
+.hidden{
+    display: none;
+}
