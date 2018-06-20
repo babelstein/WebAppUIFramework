@@ -24,6 +24,7 @@
                     }
                     $list.parent().removeClass('hidden');
                     $input.parent().find('i.form-icon').addClass('hidden');
+                    $($('.cars-search-cars .form-group')[1]).addClass('hidden');
                 },
                 error: function(jqXHR, textStatus, errorThrown){
                 }
@@ -51,6 +52,7 @@
                 }
                 $('.model-list').addClass('hidden');
                 $list.parent().removeClass('hidden');
+                $($('.cars-search-cars .form-group')[1]).removeClass('hidden');
             },
             error: function(jqXHR, textStatus, errorThrown){
             }
