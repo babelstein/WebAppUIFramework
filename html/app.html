@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/login.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/spinner.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/appDashboard.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/Modules/carSearchModule.css" />
 </head>
 <body>
     <div id="loader"> 
@@ -37,7 +38,7 @@
     <div id="login-page" class="hidden">
         <h1>Dzień dobry!</h1>
         <div class="login-block">
-            <img src="" alt="logo" class="loading-logo">
+            <img src="https://profiauto.pl/themes/profiauto/images/profiauto-logo.png" alt="logo" class="loading-logo">
             <form action="/Identity/Login" method="post" class="login-form">
                 <div class="form-group has-success">
                     <label for="login" class="form-label">Login: </label>
@@ -54,12 +55,71 @@
         </div>
     </div>
     <div id="dashboard" class="hidden">
-        <nav class="top"></nav>
-        <nav class="side"></nav>
-        <div class="content"></div>
+        <nav class="top">
+            <img src="">
+            <figure class="avatar avatar-lg bg-error" data-initial="User">
+                <i class="avatar-presence online"></i>
+            </figure>
+        </nav>
+        <nav class="side">
+            <ul>
+                <li class="c-hand">Osobowe</li>
+                <li class="c-hand">Uzytkowe</li>
+                <li class="c-hand">Silniki</li>
+                <li class="c-hand">Uniwersalne</li>
+                <li class="c-hand">Oferta</li>
+                <li class="c-hand">Opony</li>
+                <li class="separator"></li>
+                <li class="c-hand">Moje Profiauto</li>
+                <li class="c-hand">Ulubione</li>
+                <li class="c-hand">Porownanie</li>
+                <li class="separator"></li>
+                <li class="c-hand">Panel PH</li>
+                <li class="c-hand">E-Serwis</li>
+            </ul>
+        </nav>
+        <div class="content">
+            <div class="col1">
+                <div id="cars-search-module" class="dashboard-module">
+                    <h2>{Module Title}</h2>
+                    <div class="btn-group btn-group-block">
+                        <button class="btn btn-error">Osobowe</button>
+                        <button class="btn btn-error">VIN</button>
+                        <button class="btn btn-error">Użytkowe</button>
+                        <button class="btn btn-error">Silniki</button>
+                    </div>
+                    <div class="cars-search-cars">
+                        <form class="bg-error">
+                            <label class="form-label" for="input-example-1">Wpisz markę i model:</label>
+                            <div class="form-group has-success has-icon-right">
+                              <input class="form-input" type="text" id="input-example-1" placeholder="np. Skoda Superb III">
+                              <i class="form-icon loading hidden"></i>
+                            </div>
+                            <div class="model-list hidden">
+                                <ul>
+                                </ul>
+                            </div>
+                            <div class="form-group has-success hidden">
+                                <label class="form-label" for="input-example-2">Wybierz silnik:</label>
+                                <input class="form-input hidden" type="text" id="input-example-2" placeholder="np. 1.9">
+                            </div>
+                            <div class="engine-list hidden">
+                                <ul>
+                                </ul>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="cars-search-vin"></div>
+                    <div class="cars-search-trucks"></div>
+                    <div class="cars-search-engines"></div>
+                </div>
+            </div>
+            <div class="col2"></div>
+        </div>
     </div>
 </body> 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="/assets/js/init.js" defer ></script>
 <script src="/assets/js/loginPage.js" defer ></script>
+<script src="/assets/js/Modules/carSearchModule.js" defer ></script>
 </html>

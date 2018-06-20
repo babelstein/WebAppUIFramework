@@ -1,17 +1,87 @@
 #dashboard{
-
+    width: 100%;
+    height: 100%;
+    position: fixed;
 }
 
 nav.top{
-    height:40px;
+    height:50px;
     width:100%;
-    background-color:rgb(255, 145, 0);
+    background-color:rgb(92, 92, 92);
     display:block;
+    text-align: left; 
+}
+
+nav.top img{
+    padding-top: 7px;
+    padding-left: 50px;   
+}
+
+nav.top figure{
+    float: right;
+    margin-right: 10px;
+    margin-top: 1px;
 }
 
 nav.side{
-    width:260px;
+    width:14%;
     height:100%;
-    background-color:rgb(255, 145, 0);
-    position: absolute;
+    background-color:rgb(232, 86, 0);
+    float: left;
+    display: block;
+    position: relative;
+
+    font-size: .8rem;
+    line-height: 1rem;
+}
+
+nav.side ul{
+    list-style: none;
+    margin: 0;
+}
+
+nav.side ul li{
+    margin-top:0px;
+    padding: 6px 0px 6px 0px;
+    border-bottom: 1px solid rgb(255, 165, 0);
+}
+
+nav.side ul li.separator{
+    padding-top: 0px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgb(255, 165, 0);
+}
+
+#dashboard .content{
+    float: left;
+    display: block;
+    position: relative;
+    width: 86%;
+    height: 100%;
+}
+
+#dashboard .content .dashboard-module{
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0.5em;
+}
+
+#dashboard .content .dashboard-module h2{
+    text-align: left;
+}
+
+#dashboard .content .col1{
+    height: 100%;
+    width: 50%;
+    float: left;
+    display: block;
+}
+
+#dashboard .content .col2{
+    height: 100%;
+    width: 50%;
+    float: left;
+    display: block;
 }
